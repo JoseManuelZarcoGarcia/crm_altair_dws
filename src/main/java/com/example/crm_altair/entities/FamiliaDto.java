@@ -46,10 +46,10 @@ public class FamiliaDto {
 	private String direccion_Madre;
 	
 	@Column(name = "codigo_Postal_Padre", nullable = false, length = 512)
-	private String codigo_Postal_Padre;
+	private int codigo_Postal_Padre;
 	
 	@Column(name = "codigo_Postal_Madre", nullable = false, length = 512)
-	private String codigo_Postal_Madre;
+	private int codigo_Postal_Madre;
 	
 	@Column(name = "municipio_Padre", nullable = false, length = 512)
 	private String municipio_Padre;
@@ -83,8 +83,8 @@ public class FamiliaDto {
 	
 	public FamiliaDto(long id_Familia, String nombre_Padre, String nombre_Madre, String apellidos_Padre,
 			String apellidos_Madre, String email_Padre, String email_Madre, String telefono_Padre,
-			String telefono_Madre, String direccion_Padre, String direccion_Madre, String codigo_Postal_Padre,
-			String codigo_Postal_Madre, String municipio_Padre, String municipio_Madre, String provincia_Padre,
+			String telefono_Madre, String direccion_Padre, String direccion_Madre, int codigo_Postal_Padre,
+			int codigo_Postal_Madre, String municipio_Padre, String municipio_Madre, String provincia_Padre,
 			String provincia_Madre, boolean son_Separados, boolean es_Compartida, boolean es_Padre, boolean es_Madre) {
 		super();
 		this.id_Familia = id_Familia;
@@ -179,16 +179,16 @@ public class FamiliaDto {
 	public void setDireccion_Madre(String direccion_Madre) {
 		this.direccion_Madre = direccion_Madre;
 	}
-	public String getCodigo_Postal_Padre() {
+	public int getCodigo_Postal_Padre() {
 		return codigo_Postal_Padre;
 	}
-	public void setCodigo_Postal_Padre(String codigo_Postal_Padre) {
+	public void setCodigo_Postal_Padre(int codigo_Postal_Padre) {
 		this.codigo_Postal_Padre = codigo_Postal_Padre;
 	}
-	public String getCodigo_Postal_Madre() {
+	public int getCodigo_Postal_Madre() {
 		return codigo_Postal_Madre;
 	}
-	public void setCodigo_Postal_Madre(String codigo_Postal_Madre) {
+	public void setCodigo_Postal_Madre(int codigo_Postal_Madre) {
 		this.codigo_Postal_Madre = codigo_Postal_Madre;
 	}
 	public String getMunicipio_Padre() {
